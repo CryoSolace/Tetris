@@ -1,4 +1,4 @@
-from time import sleep # Used for waiting to generate each fram
+from time import sleep # Used for waiting to generate each frame
 from random import randint # Used to randomly select a tetromino 
 from msvcrt import kbhit, getch # Used for keypresses
 from sys import exit # Used to end the game
@@ -105,7 +105,7 @@ class Tetris:
         if move == "left" : self.offsetX -= 1
         else: self.offsetX += 1
 
-        self.coords = newCoords # No return value because the coordinates is modified here already
+        self.coords = newCoords # No return value because the coordinates are modified here already
 
 
     def rotate(self, coords, direction="cw", isFirst = False):
