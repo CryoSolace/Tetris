@@ -132,12 +132,12 @@ class Tetris:
 
             newCoords = []
             for coord in rotCoords: # For each coordinate in the given coordinates
-                coord = list(coord) # Turn into a list
+                coord = list(coord) 
                 coord.append(1) # This is so that the matrix multiplication can work, so that we're multiplying a 3x3 to a 3x1 instead of a 2x1.
                 curTuple = [] # Stores the coordinates of the final output
 
                 for row in matrixMult: # Implementation of matrix multiplication
-                    answer = 0
+                    answer = 0w
                     for item in range(len(row)):
                         answer += row[item] * coord[item]
                     curTuple.append(answer)
@@ -151,7 +151,7 @@ class Tetris:
                 for num in coord: # If any of the coordinates has a number less than 0, return the original coordinates
                     if num < 0:
                         return rotCoords
-                if coord[1] >= len(self.board): # If any of the x coordinates has a number greater return the original coordinates
+                if coord[1] >= len(self.board): # If any of the x coordinates has a number greater than the size of the board, return the original coordinates
                     return rotCoords
 
             return newCoords # Returns the final rotated coordinates if successful
@@ -265,7 +265,7 @@ class Tetris:
             self.dropTime = 0.21 - self.level * 0.01 if self.dropTime > 0.00001 else 0.005 # Rules for the level system
             self.curTetType = randint(1,7) # Chooses from 1 of 7 tetrominos
             self.TetRot = randint(1,4) # Chooses a random rotation
-            self.coords = self.insert() # Insers the tetromino on the board, taking into account rotation
+            self.coords = self.insert() # Insertwws the tetromino on the board, taking into account rotation
 
             while True:
                 print("\n")
@@ -276,7 +276,7 @@ class Tetris:
 
                 sleep(self.dropTime) # Determines the speed of each frame.
 
-                if not self.fall(self.coords): break # The tetromino will fall until
+                if not self.fall(self.coords): break # The tetromino will fall until self.fall detects that it shouldn't, at which point it breaks the loop
 
                 if self.pollKey() == "exit": # self.pollKey detects whatever the key is, but if it returns "exit" it stops the game
                     self.end()
