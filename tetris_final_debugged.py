@@ -287,7 +287,7 @@ class Tetris:
         input()
 
         pygame.init()
-        pygame.mixer.music.load('C:\\Users\\Alexander\\Documents\\GitHub\\Tetris\\Tetris_Music.mp3')
+        pygame.mixer.music.load('Tetris_Music.mp3')
         pygame.mixer.music.play(-1)
         self.isPaused = False
 
