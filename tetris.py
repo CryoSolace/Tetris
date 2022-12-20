@@ -137,7 +137,7 @@ class Tetris:
                 curTuple = [] # Stores the coordinates of the final output
 
                 for row in matrixMult: # Implementation of matrix multiplication
-                    answer = 0w
+                    answer = 0
                     for item in range(len(row)):
                         answer += row[item] * coord[item]
                     curTuple.append(answer)
