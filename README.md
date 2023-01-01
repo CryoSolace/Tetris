@@ -1,4 +1,4 @@
 # Tetris
 Tetris in python! Just run the tetris.py file from the console.
 
-Current version is alpha.
+You can watch a demonstration here: https://www.youtube.com/watch?v=UeLNNDtkpUM
